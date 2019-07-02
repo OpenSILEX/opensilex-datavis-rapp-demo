@@ -28,7 +28,7 @@ variableList <- function(token, wsUrl = "www.opensilex.org/openSilexAPI/rest/"){
 
 
   # Recuperation of variables information
-  rawVar <- phisWSClientR::getVariables2(token = token)
+  rawVar <- phisWSClientR::getVariablesDetails(token = token)
 
   # Extraction of the information of interest
   names <- rawVar$data$label
