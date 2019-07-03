@@ -39,8 +39,8 @@ variableList <- function(token, wsUrl = "www.opensilex.org/openSilexAPI/rest/"){
     methods[i] <- strsplit(methods[i], split="_")[[1]][2]
   }
   label <- rawVar$data$label
-  acronyms <- rawVar$data$trait$label
-  unitVar <- rawVar$data$unit$comment
+  acronyms <- rawVar$data$trait.label
+  unitVar <- rawVar$data$unit.comment
   uriVar <- rawVar$data$uri
 
   # Creation of the dataTable with information of interest
