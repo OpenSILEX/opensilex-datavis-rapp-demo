@@ -32,15 +32,15 @@ function initInputs() {
 
   var config = getConfigOpenSilexParameters();
   // test token send in url
-  if (config.token == null || config.token == "") {
-    alert("An accessToken is required");
-    return false;
-  } 
-  if (config.wsUrl == null || config.wsUrl == "") {
-    alert("A wsUrl is required");
-    return false;
-  } 
-  
+  // if (config.token == null || config.token == "") {
+  //   alert("An accessToken is required");
+  //   return false;
+  // }
+  // if (config.wsUrl == null || config.wsUrl == "") {
+    // alert("A wsUrl is required");
+  //   return false;
+  // }
+
   // variables' initialization
   // if fail disabled input
   setListInputFromRList("variable","variableList", config, {
@@ -61,8 +61,7 @@ function getInputs() {
     return false;
   }
   functionsParameters = {
-    varURI: varURIs,
-    token: config.token,
+    varURI: varURIs
   };
   if (config.wsUrl !== null) {
     functionsParameters["wsUrl"] = config.wsUrl;
