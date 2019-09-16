@@ -10,11 +10,17 @@ In your favourite R environment (Rstudio?)
 
 ```install.package('opencpu')```
 
-2. download the app 
+2. installremotes and phisWSClientR package:
+
+```install.package('remotes');```
+```install_github("OpenSILEX/phisWSClientR", build_vignettes=TRUE, ref="v2.0.1")```
+
+
+3. download the app 
 
 ```install_apps("opensilex/opensilex-datavis-rapp-demo")```
 
-3. start the app
+4. start the app
 
 ```ocpu_start_app("opensilex/opensilex-datavis-rapp-demo")```
 
