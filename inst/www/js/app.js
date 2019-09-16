@@ -28,7 +28,6 @@ $(function() {
 });
 
 function initInputs() {
-  initOpenSilexParameters();
 
   var config = getConfigOpenSilexParameters();
   // test token send in url

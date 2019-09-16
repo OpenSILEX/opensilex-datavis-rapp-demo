@@ -159,7 +159,6 @@ function makeHeaders(colnames) {
    */
 function setListInputFromRList(inputId, RfunctionName, config, selectParameters = {}) {
   $("#cssLoader").addClass("is-active");
-  functionListParameters = { token: config.token };
 
   if (config.wsUrl !== null) {
     functionListParameters["wsUrl"] = config.wsUrl;
