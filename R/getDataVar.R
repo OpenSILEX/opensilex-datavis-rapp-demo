@@ -33,7 +33,7 @@ getDataVar <- function(varURI, variableList) {
 
   # Recuperation of the data from the WS
   myCount <- phisWSClientR::getEnvironmentData( variable = varURI)$totalCount
-  enviroData <- phisWSClientR::getEnvironmentData( variable =  varURI, verbose = TRUE, pageSize = myCount)$data
+  enviroData <- phisWSClientR::getEnvironmentData( variable =  varURI, pageSize = myCount)$data
 
   # Creation of the dataTable to return
   nomVar <- paste(toupper(substr(variableList$name[numVar],1,1)), substr(variableList$name[numVar],2,nchar(variableList$name[numVar])), sep = "")
