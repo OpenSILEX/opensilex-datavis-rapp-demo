@@ -8,27 +8,23 @@
 
 #' @title Get Variable's Names from WS2 and formate them
 #'
-#' @importFrom phisWSClientR initializeClientConnection
 #' @importFrom phisWSClientR getEnvironmentData
 #'
-#' @param token a token from \code{\link{getToken}} function
 #' @param wsUrl url of the webservice
 #' @return WSResponse
 #' @export
 #'
 #' @examples
 #' \donttest{
-#' initializeClientConnection(apiID="ws_private", url = "www.opensilex.org/openSilexAPI/rest/")
-#'  aToken <- getToken("guest@opensilex.org","guest")
-#'  token <- aToken$data
-#'  variableList(token = token)
+#' connectToPHISWS(apiID="ws_2_public","guest@opensilex.org","guest")
+#'  variableList()
 #' }
-variableList <- function(token, wsUrl = "www.opensilex.org/openSilexAPI/rest/"){
-  phisWSClientR::initializeClientConnection(apiID="ws_private", url = wsUrl)
+variableList <- function(wsUrl = "www.opensilex.org/openSilexAPI/rest/"){
+  phisWSClientR::connectToPHISWS(apiID="ws_2_public","guest@opensilex.org","guest")
 
 
   # Recuperation of variables information
-  rawVar <- phisWSClientR::getVariablesDetails(token = token)
+  rawVar <- phisWSClientR::getVariablesDetails()
 
   # Extraction of the information of interest
   names <- rawVar$data$label
