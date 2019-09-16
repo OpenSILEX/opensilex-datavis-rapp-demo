@@ -8,7 +8,6 @@
 
 #' @title Get Data from WS2 and formate them
 #'
-#' @importFrom phisWSClientR initializeClientConnection
 #' @importFrom phisWSClientR getVariables2
 #'
 #' @param varURI uri of the variable to plot, from the \code{\link{variableList}} function or the web service directly

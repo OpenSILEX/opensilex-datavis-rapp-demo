@@ -8,7 +8,6 @@
 
 #' @title Get Variable's Names from WS2 and formate them
 #'
-#' @importFrom phisWSClientR initializeClientConnection
 #' @importFrom phisWSClientR getEnvironmentData
 #'
 #' @param wsUrl url of the webservice
