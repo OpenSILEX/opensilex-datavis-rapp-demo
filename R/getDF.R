@@ -29,9 +29,9 @@
 #' getDF( varURI = list("http://www.opensilex.org/demo/id/variables/v004",
 #'                                          "http://www.opensilex.org/demo/id/variables/v007"))
 #' }
-getDF <- function(varURI, smoothing = FALSE, sensor = NULL, endDate = NULL, startDate = NULL, wsUrl = "www.opensilex.org/openSilexAPI/rest/"){
+getDF <- function(varURI, smoothing = FALSE, sensor = NULL, endDate = NULL, startDate = NULL, wsUrl = "http://www.opensilex.org:8080/openSilexSandBoxAPI/rest/"){
 
-  phisWSClientR::connectToPHISWS(apiID="ws_2_public","guest@opensilex.org","guest")
+  phisWSClientR::connectToPHISWS(apiID="ws_2_public","guest@opensilex.org","guest", url=wsUrl)
   ## Data recuperation
   # Variable's information
   variableList <- variableList( wsUrl = wsUrl)
