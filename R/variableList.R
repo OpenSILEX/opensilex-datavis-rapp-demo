@@ -19,8 +19,8 @@
 #' connectToPHISWS(apiID="ws_2_public","guest@opensilex.org","guest")
 #'  variableList()
 #' }
-variableList <- function(wsUrl = "www.opensilex.org/openSilexAPI/rest/"){
-  phisWSClientR::connectToPHISWS(apiID="ws_2_public","guest@opensilex.org","guest")
+variableList <- function(wsUrl = "http://www.opensilex.org:8080/openSilexSandBoxAPI/rest/"){
+  phisWSClientR::connectToPHISWS(apiID="ws_2_public","guest@opensilex.org","guest", url=wsUrl)
 
 
   # Recuperation of variables information
