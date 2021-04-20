@@ -26,8 +26,8 @@
 #'
 #' @export
 
-plotVarDemo <- function(varURI, wsUrl = "www.opensilex.org:8080/openSilexSandBoxAPI/rest/"){
-  phisWSClientR::connectToPHISWS(apiID="ws_2_public","guest@opensilex.org","guest")
+plotVarDemo <- function(varURI, wsUrl = "http://www.opensilex.org:8080/openSilexSandBoxAPI/rest/"){
+  phisWSClientR::connectToPHISWS(apiID="ws_2_public","guest@opensilex.org","guest",url=wsUrl)
 
   ### Collecting Data
   variableList <- variableList( wsUrl = wsUrl)
